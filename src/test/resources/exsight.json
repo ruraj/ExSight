@@ -1,0 +1,6 @@
+{
+//  "package": "com.ruraj.exsight.test",
+  "classes": [
+    "com.ruraj.exsight.test.ReflectionTestSubject"
+  ]
+}
