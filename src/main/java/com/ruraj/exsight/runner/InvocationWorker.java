@@ -51,8 +51,8 @@ public class InvocationWorker extends Thread {
         } catch (IllegalAccessException e) {
           e.printStackTrace();
         } catch (InvocationTargetException e) {
-          // This is the bazinga!
-          result = e.getCause().getLocalizedMessage();
+          // This is what we want!
+          result = e.getCause().toString();
         }
 
         for (Object object : objects) {
@@ -67,6 +67,7 @@ public class InvocationWorker extends Thread {
     System.out.print(msg);
     try {
       fileWriter.write(msg);
+      fileWriter.flush();
     } catch (IOException e) {
       e.printStackTrace();
     }
